@@ -39,3 +39,8 @@ h1 {
   text-decoration: none;
   font-weight: bold;
 }
+.note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #888;
+}
