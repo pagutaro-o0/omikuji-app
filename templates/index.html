@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>おみくじ</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <h1>🔮 おみくじ 🔮</h1>
+    <form action="/go" method="post">
+      <input type="text" name="name" placeholder="名前を入れてね" required>
+      <br><br>
+      <button type="submit" class="btn">占う！</button>
+    </form>
+  </div>
+</body>
+</html>

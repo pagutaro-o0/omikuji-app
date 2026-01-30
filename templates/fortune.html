@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>今日の運勢</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <h1>🔮 今日の運勢 🔮</h1>
+    <p class="name">{{ name }} さん</p>
+    <p class="fortune">{{ fortune }}</p>
+    <p class="message">{{ message }}</p>
+    <a
+  class="btn"
+  target="_blank"
+  href="https://twitter.com/intent/tweet?text={{ name }}さんの今日の運勢は「{{ fortune }}」！🔮%0A{{ message }}"
+>
+  Xでシェア
+</a>
+    <a href="/fortune/{{ name }}" class="btn">もう一回！</a>
+  </div>
+</body>
+</html>
