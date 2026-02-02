@@ -3,44 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>今日の運勢</title>
-  {% extends "base.html" %}
-{% block head %}
-  <meta property="og:title" content="今日の運勢おみくじ">
-<meta property="og:description" content="名前を入れるだけ！かわいいおみくじ🔮">
-<meta property="og:image" content="https://omikuji-app-xrvz.onrender.com/static/ogp.png">
-<meta property="og:url" content="https://omikuji-app-xrvz.onrender.com">
-<meta property="og:type" content="website">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="今日の運勢おみくじ">
-<meta name="twitter:description" content="名前を入れるだけ！かわいいおみくじ🔮">
-<meta name="twitter:image" content="https://omikuji-app-xrvz.onrender.com/static/ogp.png">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  {% endblock %}
-
-{% block content %}
 </head>
 <body>
   <div class="card">
     <h1>🔮 今日の運勢 🔮</h1>
+
     <p class="name">{{ name }} さん</p>
     <p class="fortune">{{ fortune }}</p>
     <p class="message">{{ message }}</p>
+
     <a
-  class="btn"
-  target="_blank"
-  href="https://twitter.com/intent/tweet
-?text={{ name }}さんの今日の運勢は「{{ fortune }}」！🔮%0A{{ message }}
-&url=https://omikuji-app-xrvz.onrender.com
-&hashtags=すなばこ2026新年,SUNABACO"
->
-  Xでシェア
-</a>
-    <a href="/fortune/{{ name }}" class="btn">もう一回！</a>
-        <p class="note">
-      ※個人情報は保存していません。<br>
-      本アプリは占いエンタメ用です。
-    </p>
+      class="btn"
+      target="_blank"
+      href="https://twitter.com/intent/tweet?text={{ name }}さんの今日の運勢は「{{ fortune }}」！🔮%0A{{ message }}&url=https://omikuji-app-xrvz.onrender.com"
+    >
+      Xでシェア
+    </a>
+
+    <a href="/" class="btn">もう一回！</a>
   </div>
 </body>
 </html>
