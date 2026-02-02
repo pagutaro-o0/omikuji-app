@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>今日の運勢</title>
+  {% extends "base.html" %}
+{% block head %}
   <meta property="og:title" content="今日の運勢おみくじ">
 <meta property="og:description" content="名前を入れるだけ！かわいいおみくじ🔮">
 <meta property="og:image" content="https://omikuji-app-xrvz.onrender.com/static/ogp.png">
@@ -14,6 +16,9 @@
 <meta name="twitter:description" content="名前を入れるだけ！かわいいおみくじ🔮">
 <meta name="twitter:image" content="https://omikuji-app-xrvz.onrender.com/static/ogp.png">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  {% endblock %}
+
+{% block content %}
 </head>
 <body>
   <div class="card">
