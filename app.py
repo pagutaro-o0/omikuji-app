@@ -10,6 +10,7 @@ def index():
 @app.route("/go", methods=["POST"])
 def go():
     name = request.form.get("name")
+
     if not name:
         return "名前がありません", 400
 
@@ -25,8 +26,9 @@ def go():
         "大凶": "今日は無理をしないで。"
     }
 
+    import random
     result = random.choice(fortunes)
-    message = messages[result]
+    message = messages.get(result, "")
 
     return render_template(
         "fortune.html",
