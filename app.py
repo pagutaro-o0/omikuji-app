@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 import random
 
 app = Flask(__name__)
@@ -41,5 +41,5 @@ def go():
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 0000))
     app.run(host="0.0.0.0", port=port)
